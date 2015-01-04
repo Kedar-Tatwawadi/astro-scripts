@@ -29,7 +29,7 @@ wget $apod_webpage
 
 # once the basic webpage is downloaded, we search for the apod image PATHNAME using
 # sed, grep and tr programs 
-imagepath=$(sed -n -e '30p' astropix.html| grep -Po '".*?"'| tr -d '"')
+imagepath=$(sed -n -e '35p' astropix.html| grep -Po '".*?"'| tr -d '"')
 image_weblink=$basepath$imagepath
 
 #We use the image PATHNAME to download the apod image
